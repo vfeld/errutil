@@ -45,9 +45,6 @@ The http response json body will look as follows:
 
 # License
 
-Licensed under either of
+Licensed under
 
-* Apache License, Version 2.0, (LICENSE-APACHE or https://www.apache.org/licenses/LICENSE-2.0)
 * MIT license (LICENSE-MIT or https://opensource.org/licenses/MIT)
-
-at your option.
