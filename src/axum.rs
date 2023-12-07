@@ -2,6 +2,7 @@
 
 use axum::{response::{Response, IntoResponse}, http::StatusCode, Json};
 use crate::ErrorInfo;
+use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ErrorBody {
@@ -10,9 +11,10 @@ pub struct ErrorBody {
     pub error_id: String,
 }
 
+/// Generate an error body from a status code and error_info
 pub fn error_body(status: StatusCode,error_info: &ErrorInfo) -> ErrorBody {
     ErrorBody {
-        status_code: s.as_u16(),
+        status_code: status.as_u16(),
         status_description: status.canonical_reason().unwrap_or(status.as_str()).to_string(),
         error_id: error_info.errorid.clone(),
     }

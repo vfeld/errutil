@@ -21,4 +21,5 @@ uuid = { version = "1.6", features = ["v4"] }
 thiserror = "1.0"
 
 [features]
+default = ["axum"]
 axum = ["dep:axum"]
